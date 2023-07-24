@@ -1,8 +1,17 @@
 "use client"
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import {Fade , Slide , Box, Container, Grid, Typography } from '@/app/lib/MuiSsr';
-
+import mainBg from '/public/divanice.com_imgs_section-bg.webp'
+import topWave from '/public/divanice.com_imgs_waves.png'
+import Image from 'next/image';
+import { useState } from 'react';
+import { useEffect } from 'react';
 const Service = () => {
+    const [loadingComponent , setLoadingComponent] = useState(true);
+    useEffect(()=>{
+        setLoadingComponent(false)
+    },[])
+
     const serviceData  = [
         {
             title : "قسم خاص بفساتين الزفاف",
@@ -30,9 +39,12 @@ const Service = () => {
         }
     ]
   return (
-   <LazyLoadComponent>
-     <Box sx={{ overflow : 'hidden'}} className='services'>
-       <div className='top-wave'></div>
+   <>
+    {loadingComponent ? null : 
+    <LazyLoadComponent>
+     <Box sx={{ overflow : 'hidden', position : 'relative'}}>
+       <Image src={mainBg} fill alt='diva' objectFit='cover' objectPosition='center' />
+       <Image src={topWave} height={75} alt='diva' style={{zIndex : 100 , top : 0 , left : 0, position : 'absolute', transform : ' rotate(180deg)', width : '100%'}}/>
        <div className='overlay'></div>
         <Box sx={{position : 'relative'}}>
         <Box className='category-content' sx={{height : '100%', margin : '80px 0px'}}> 
@@ -63,9 +75,11 @@ const Service = () => {
     </LazyLoadComponent>
          </Box>
         </Box>
-        </Box>
 
+    </Box>
    </LazyLoadComponent>
+    }
+   </>
   )
 }
 

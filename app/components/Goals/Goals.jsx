@@ -2,10 +2,17 @@
 import RightGoals from './RightGoals'
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { Fade , Reveal , Container, Grid, Typography} from '@/app/lib/MuiSsr';
+import { useEffect, useState } from 'react';
 
 const Goals = () => {
+  const [loadingComponent , setLoadingComponent] = useState(true);
+  useEffect(()=>{
+    setLoadingComponent(false)
+  },[])
   return (
-     <LazyLoadComponent>
+     <>
+      {loadingComponent ? null : 
+        <LazyLoadComponent>
       <Container maxWidth="xxl" fixed>
         <Grid container>
           <LazyLoadComponent>
@@ -34,6 +41,8 @@ const Goals = () => {
          </Reveal>
     </Container>
      </LazyLoadComponent>
+      }
+     </>
   )
 }
 

@@ -1,27 +1,25 @@
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
-import Loading from './loading'
 
 // import { getArticleData, getCategoryData } from './lib/DataFetching';
 
-// const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
-//   ssr: true,
-// })
+const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
+  ssr: true,
+})
 const Service = dynamic(() => import('./components/Service/Service'), {
   ssr: true,
 })
-// const Goals = dynamic(() => import('./components/Goals/Goals'), {
-//   ssr: true,
-// })
+const Goals = dynamic(() => import('./components/Goals/Goals'), {
+  ssr: true,
+})
 // const LatestNews = dynamic(() => import('./components/latestNews/LatestNews'), {
 //   ssr: true,
 // })
 // const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'), {
 //   ssr: true,
 // })
-// const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'), {
-//   ssr: true,
-// })
+const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'), {
+  ssr: true,
+})
 
 // const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'), {
 //   ssr: true,
@@ -47,19 +45,16 @@ export default async function Home () {
    
   return (
         <>
-               {/* <Suspense fallback={<Loading/>}>
-                     <HomeCarousel/>
-                </Suspense>
-               <Suspense fallback={<Loading/>}>
+                    <HomeCarousel/>
                <section>
                   <AboutUs/>
                 </section>
-               </Suspense> */}
-               <Suspense fallback={<Loading/>}>
-               <section>
+               <section >
                   <Service/>
                 </section>
-               </Suspense>
+                <section>
+                  <Goals/>
+                </section>
         </>
   )
 }

@@ -19,9 +19,9 @@ const cairo = Cairo({
 
 
 export default function RootLayout({ children }) {
-  const [data , setData] = useState(true);
+  const [loadingComponent , setLoadingComponent] = useState(true);
   useEffect(()=>{
-    setData(false)
+    setLoadingComponent(false)
   },[])
   return (
     <html lang="ar">
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
      </head>
       <body
          className={cairo.className}>
-         {data ? <><Loading/></> : 
+         {loadingComponent ? <><Loading/></> : 
          <Suspense fallback={<Loading/>}>
          <MuiTheme>
          <nav>
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
               {children}
         </main>
         <footer>
-          {/* <Footer/> */}
+          <Footer/>
           <SocialFooter/>
         </footer>
         </MuiTheme>

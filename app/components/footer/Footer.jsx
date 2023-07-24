@@ -9,6 +9,7 @@ import DeltawyLogo from '/public/deltawy-logo.webp'
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
 import { useRouter } from 'next/navigation'
 import { Box, Container, Grid, IconButton, Typography} from '@/app/lib/MuiSsr';
+import { useEffect , useState} from 'react';
 
 const mainPage = [
   {
@@ -39,9 +40,16 @@ const mainPage = [
 ]
 
 const Footer = () => {
+  const [loadingComponent , setLoadingComponent] = useState(true);
+  useEffect(()=>{
+    setLoadingComponent(false)
+  },[])
+
   const router = useRouter()
   return (
-    <LazyLoadComponent>
+   <>
+     {loadingComponent ? null:
+      <LazyLoadComponent>
       <Box sx={{padding : '0px 20px'}}>
       <Grid container >
         <Grid item xs={12} xl={3} sx={{display : 'flex', flexDirection : 'column', justifyContent : 'center', alignItems : 'center'}}>
@@ -134,6 +142,8 @@ const Footer = () => {
       </Box>
       </LazyLoadComponent>
     </LazyLoadComponent>
+     }
+   </>
   )
 }
 

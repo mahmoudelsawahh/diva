@@ -182,15 +182,6 @@ padding: 85px 0px;
 /* -------------------------------End service page------------------------------------ */
 /* -------------------------------Start iframe videos ------------------------------------ */
 
-/* .deva-studio {
-  height: 950px;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  background-image: url('/divanice.com_imgs_video-background.webp'); 
-  background-repeat: no-repeat;
-  object-fit: cover;
-} */
 .deva-studio .overlay{
   position: absolute;
     top: 0;
