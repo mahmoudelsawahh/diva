@@ -1,0 +1,33 @@
+{
+  "name": "divanice",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.13.7",
+    "@mui/material": "^5.13.7",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "lightgallery": "^2.7.1",
+    "next": "13.4.9",
+    "react": "18.2.0",
+    "react-animated-slider": "^1.1.4",
+    "react-dom": "18.2.0",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-reveal": "^1.2.2",
+    "react-slick": "^0.29.0",
+    "sharp": "^0.32.4",
+    "slick-carousel": "^1.8.1",
+    "stylis-plugin-rtl": "^2.1.1",
+    "win-node-env": "^0.6.1"
+  }
+}
