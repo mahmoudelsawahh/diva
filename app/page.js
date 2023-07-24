@@ -1,9 +1,6 @@
-"use client"
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
+
 // import { getArticleData, getCategoryData } from './lib/DataFetching';
-import { Suspense, useEffect, useState } from 'react';
-import Loading from './loading';
-import HomeCarousel from './components/HomeCarousel/HomeCarousel';
 
 // const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
 //   ssr: true,
@@ -20,9 +17,9 @@ import HomeCarousel from './components/HomeCarousel/HomeCarousel';
 // const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'), {
 //   ssr: true,
 // })
-// const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'), {
-//   ssr: true,
-// })
+const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'), {
+  ssr: true,
+})
 
 // const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'), {
 //   ssr: true,
@@ -35,21 +32,21 @@ import HomeCarousel from './components/HomeCarousel/HomeCarousel';
 // })
 
 
+export const metadata ={
+  title: "اتيليه فساتين زفاف وافراح",
+  description: '...',
+}
 
 
-
-export default  function Home () {
+export default async function Home () {
   // const data = await getArticleData();
   // const CategoryData = await getCategoryData();
 
-  const [data , setData] = useState(true);
-  useEffect(()=>{
-    setData(false)
-  },[])
+
    
   return (
              <>
-              {data ? <Loading/> : <HomeCarousel/> }
+                <HomeCarousel/>
              </>
   )
 }

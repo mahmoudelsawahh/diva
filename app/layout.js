@@ -1,23 +1,13 @@
 "use client"
-import dynamic from 'next/dynamic'
 import './globals.css'
 import './globals2.css'
-
 import {Cairo } from 'next/font/google'
 import MuiTheme from './lib/muiThem'
-import { Suspense } from 'react'
-const NavBar = dynamic(() => import('./components/navbar/NavBar'), {
-  ssr: true,
-})
-const Footer = dynamic(() => import('./components/footer/Footer'), {
-  ssr: true,
-})
-const Loading = dynamic(() => import('./loading'), {
-  ssr: true,
-})
-const SocialFooter = dynamic(() => import('./components/footer/SocialFooter'), {
-  ssr: true,
-})
+import { Suspense, useEffect, useState } from 'react'
+import Loading from './loading'
+import SocialFooter from './components/footer/SocialFooter'
+import DrawerAppBar from './components/navbar/NavBar'
+
 
 const cairo = Cairo({
   weight: ['400', '700'],
@@ -26,20 +16,12 @@ const cairo = Cairo({
 })
 
 
-export const metadata = {
-  title: "اتيليه فساتين زفاف وافراح",
-  description : `  
-        اتيليه فساتين زفاف و  افراح وسواريه وخطوبة وحنة  و تفصيل و  بيع وايجار  مستوردة تركي وفرنساوي موديلات لعام 2018  احدث صيحات الموضة 
-      يوجد فساتين زفاف وسواريه وسهرة للمحجبات وكذلك فساتين سواريه وسهرة وزفاف قصيرة بناتي  
-      ميك اب ديفا على يد خبيرة التجميل ميك اب ارتيست ديفا 
-      جميع المواد المستخدمة في التجميل اوريجينال و براندات عالمية مثل ماك وانستازيا وغيرها
-      يوجد  ماكياج زفاف و خطوبة وسواريه وسهرة وحنة وبروتين وتنظيف وعناية البشرة وكيراتين 
-      يوجد احدث لفات الطرح لعام 2018 للمحجبات  وشنيوهات الشعر كما يوجد ميك اب خفيف ويومي و يغير الشكل و يكبر ويصغر العيون 
-      احدث رسومات العيون لعام 2018   
-  `
-}
 
 export default function RootLayout({ children }) {
+  const [data , setData] = useState(true);
+  useEffect(()=>{
+    setData(false)
+  },[])
   return (
     <html lang="ar">
      <head>
@@ -84,12 +66,16 @@ export default function RootLayout({ children }) {
          className={cairo.className}>
        <MuiTheme>
         <nav>
-          <NavBar/>
+          <DrawerAppBar/>
         </nav>
         <main>
+          {data ? <> <Loading/> </> : 
+          <>
           <Suspense fallback={<Loading/>}>
               {children}
           </Suspense>
+          </>
+          }
         </main>
         <footer>
           {/* <Footer/> */}
