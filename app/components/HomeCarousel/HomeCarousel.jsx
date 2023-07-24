@@ -2,6 +2,10 @@
 import Slider from "react-slick";
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import {Fade, Typography } from '@/app/lib/MuiSsr';
+import Image from "next/image";
+import divaBg1 from "/public/divanice.com_imgs_diva2.webp"
+import divaBg2 from "/public/divanice.com_imgs_diva3.webp"
+
 const HomeCarousel = () => {
     const settings = {
         dots: true,
@@ -18,7 +22,8 @@ const HomeCarousel = () => {
      <LazyLoadComponent>
           <Slider {...settings}>
             <LazyLoadComponent>
-            <div style={{width : '100%', height : '100vh', objectFit : 'cover' }} className='carsoul-bg1' >
+            <div style={{position : 'relative', height : '100vh'}}>
+            <Image src={divaBg1} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
              <div className="center">
                   <LazyLoadComponent>
                   <Fade left>
@@ -27,11 +32,12 @@ const HomeCarousel = () => {
 			        <Typography variant='body1' sx={{fontSize : {xs : '20ox', md : '25px'}, textAlign : 'center'}}>مرحباً بكم في &quot; ديفا &quot; أتيليه وميك أب أستوديو</Typography>
                  </Fade>
                   </LazyLoadComponent>
-			</div>
+		      	</div>
             </div>
             </LazyLoadComponent>
             <LazyLoadComponent>
-            <div style={{width : '100%', height : '100vh', objectFit : 'cover' }} className='carsoul-bg2'>
+            <div style={{position : 'relative', height : '100vh'}}>
+            <Image src={divaBg2} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
             <div className="center">
                  <LazyLoadComponent>
                  <Fade left>

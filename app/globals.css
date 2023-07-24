@@ -85,23 +85,6 @@ button a.active{
 
 /*-------------------Start Home page carsoul -------------------*/
 
-.carsoul-bg1{
-  background-image: url('/divanice.com_imgs_diva2.webp');
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  background-size: cover;
-  height: 100vh;
-} 
-.carsoul-bg2{
-  background-image: url('/divanice.com_imgs_diva3.webp');
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  background-size: cover;
-  height: 100vh;
-  object-fit: cover;
-}
 .carsoul{
   background-repeat: no-repeat;
   background-position: center center;
@@ -117,6 +100,8 @@ button a.active{
   flex-direction: column;
   color: #fff !important;
   background-color: #00000073;
+  position: absolute;
+  width: 100%;
 }
 
 .title-before::before{

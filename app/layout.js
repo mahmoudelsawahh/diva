@@ -1,3 +1,4 @@
+"use client"
 import dynamic from 'next/dynamic'
 import './globals.css'
 import './globals2.css'
@@ -91,7 +92,7 @@ export default function RootLayout({ children }) {
           </Suspense>
         </main>
         <footer>
-          <Footer/>
+          {/* <Footer/> */}
           <SocialFooter/>
         </footer>
        </MuiTheme>

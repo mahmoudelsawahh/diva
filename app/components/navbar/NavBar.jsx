@@ -1,7 +1,7 @@
 "use client"
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import Logo from '/public/divanice-logo.png'
+import Logo from '/public/diva-logo.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -53,8 +53,10 @@ export default function DrawerAppBar(props) {
      <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
          <LazyLoadComponent>
                  {/* <Image  onClick={()=> router.push('/')} src={Logo} alt='اتيليه فساتين زفاف وافراح' width={'300'} priority/> */}
-                 <div style={{width : '300px', position : 'relative', height : '130px'}}>
-                  <Image priority={true}  onClick={()=> router.push('/')} fill objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                 <div>
+                   <div style={{position : 'relative', padding : '10px 60px'}}>
+                   <Image priority={true}  onClick={()=> router.push('/')} style={{width : '100%', height : '100%'}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                   </div>
                   </div>
         </LazyLoadComponent>
       <Divider />
@@ -91,7 +93,7 @@ export default function DrawerAppBar(props) {
           <Box sx={{ flexGrow: 1 , display: { xs: 'flex', sm: 'block' }, justifyContent : 'flex-start' , padding : {xs : '5px' , md :'12px'}, cursor : 'pointer'
            }}>
             <LazyLoadComponent>
-                  <div style={{width : '160px', position : 'relative', height : '80px'}}>
+                  <div style={{width : '90px', position : 'relative', height : '76px'}}>
                   <Image priority={true}  onClick={()=> router.push('/')} fill objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                   </div>
             </LazyLoadComponent>

@@ -36,7 +36,12 @@ const nextConfig = {
 
       },
     ],
-      domains :  ['api.divanice.com']
+      domains :  ['api.divanice.com'],
+      deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+      imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+      formats: ['image/webp'],
+
+
   },
   transpilePackages: ["@mui/system", "@mui/material", "@mui/icons-material"],
   modularizeImports: {
@@ -53,6 +58,7 @@ const nextConfig = {
       transform: '@material-ui/icons/{{ matches.[1] }}/{{member}}'
     }
   },
+
 }
 
 module.exports = nextConfig

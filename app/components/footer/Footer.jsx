@@ -1,5 +1,5 @@
 "use client"
-import Logo from '/public/divanice-logo.png'
+import Logo from '/public/divanice-logo.webp'
 import Image from 'next/image'
 import Link from 'next/link'
 import PhoneIcon from '@mui/icons-material/Phone';
