@@ -1,9 +1,7 @@
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { useRouter } from 'next/navigation';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { Box, Button, Typography } from '@/app/lib/MuiSsr';
-import { Suspense } from 'react';
-import Loading from '@/app/loading';
+
 
 const AboutIframe = () => {
   const router = useRouter();

@@ -7,9 +7,9 @@ import Loading from './loading'
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
   ssr: true,
 })
-// const Service = dynamic(() => import('./components/Service/Service'), {
-//   ssr: true,
-// })
+const Service = dynamic(() => import('./components/Service/Service'), {
+  ssr: true,
+})
 // const Goals = dynamic(() => import('./components/Goals/Goals'), {
 //   ssr: true,
 // })
@@ -53,6 +53,11 @@ export default async function Home () {
                <Suspense fallback={<Loading/>}>
                <section>
                   <AboutUs/>
+                </section>
+               </Suspense>
+               <Suspense fallback={<Loading/>}>
+               <section>
+                  <Service/>
                 </section>
                </Suspense>
         </>
