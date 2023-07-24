@@ -7,6 +7,13 @@
   --main-color : #333;
   --secondary-color : #E60263
 }
+
+
+.home-slider-secondImage{
+  height: 100% !important;
+}
+
+
 *{
   padding: 0;
   margin: 0;

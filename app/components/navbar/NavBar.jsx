@@ -54,7 +54,7 @@ export default function DrawerAppBar(props) {
                  {/* <Image  onClick={()=> router.push('/')} src={Logo} alt='اتيليه فساتين زفاف وافراح' width={'300'} priority/> */}
                  <div>
                    <div style={{position : 'relative', padding : '10px 60px'}}>
-                   <Image priority={true}  layout='responsive'  onClick={()=> router.push('/')} style={{width : '100%',}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                   <Image priority={true}  onClick={()=> router.push('/')} style={{width : '100%',}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                    </div>
                   </div>
       <Divider />
@@ -91,7 +91,7 @@ export default function DrawerAppBar(props) {
           <Box sx={{ flexGrow: 1 , display: { xs: 'flex', sm: 'block' }, justifyContent : 'flex-start' , padding : {xs : '5px' , md :'12px'}, cursor : 'pointer'
            }}>
                   <div style={{width : '90px', position : 'relative', height : '76px'}}>
-                  <Image  priority={true}  onClick={()=> router.push('/')}  layout='responsive' objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                  <Image priority={true} layout="responsive" onClick={()=> router.push('/')} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                   </div>
           </Box>
 
