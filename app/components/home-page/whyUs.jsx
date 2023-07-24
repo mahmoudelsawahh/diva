@@ -1,9 +1,10 @@
 'use client'
 import {Box, Button, Typography } from '@/app/lib/MuiSsr';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 const WhyUs = () => {
   return (
-    <Box sx={{marginTop : {xs : '50px', md : '0px'}}}>
+      <Box sx={{marginTop : {xs : '50px', md : '0px'}}}>
         <Typography variant='body2' sx={{color : '#E60263', fontSize : '20px', fontWeight : 'bold'}}>
            لماذا نحن ؟ 
         </Typography>
