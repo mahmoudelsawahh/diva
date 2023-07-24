@@ -47,10 +47,10 @@ export default async function Home () {
    
   return (
         <>
-                <Suspense>
+                <Suspense fallback={<h1>loading</h1>}>
                      <HomeCarousel/>
                 </Suspense>
-               <Suspense>
+                <Suspense fallback={<h1>loading</h1>}>
                <section>
                   <AboutUs/>
                 </section>
