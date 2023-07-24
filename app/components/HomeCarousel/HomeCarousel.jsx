@@ -22,7 +22,7 @@ const HomeCarousel = () => {
           <Slider {...settings}>
             <LazyLoadComponent>
             <div style={{position : 'relative', height : '100vh'}}>
-            <Image loading="lazy" src={divaBg1} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
+            <Image priority src={divaBg1} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
              <div className="center">
                   <LazyLoadComponent>
                   <Fade left>
@@ -36,7 +36,7 @@ const HomeCarousel = () => {
             </LazyLoadComponent>
             <LazyLoadComponent>
             <div style={{position : 'relative', height : '100vh'}}>
-            <Image loading="lazy" src={divaBg2} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
+            <Image priority={true} src={divaBg2} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
             <div className="center">
                  <LazyLoadComponent>
                  <Fade left>
