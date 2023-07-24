@@ -7,6 +7,7 @@ import { Suspense, useEffect, useState } from 'react'
 import Loading from './loading'
 import SocialFooter from './components/footer/SocialFooter'
 import DrawerAppBar from './components/navbar/NavBar'
+import Footer from './components/footer/Footer'
 
 
 const cairo = Cairo({
@@ -64,24 +65,23 @@ export default function RootLayout({ children }) {
      </head>
       <body
          className={cairo.className}>
-       <MuiTheme>
-        <nav>
+         {data ? <><Loading/></> : 
+         <Suspense fallback={<Loading/>}>
+         <MuiTheme>
+         <nav>
           <DrawerAppBar/>
         </nav>
         <main>
-          {data ? <> <Loading/> </> : 
-          <>
-          <Suspense fallback={<Loading/>}>
               {children}
-          </Suspense>
-          </>
-          }
         </main>
         <footer>
-          {/* <Footer/> */}
+          <Footer/>
           <SocialFooter/>
         </footer>
-       </MuiTheme>
+        </MuiTheme>
+
+         </Suspense>
+         }
       </body>
     </html>
   )
