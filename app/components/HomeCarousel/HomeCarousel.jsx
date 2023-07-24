@@ -6,7 +6,6 @@ import Image from "next/image";
 import divaBg1 from "/public/divanice.com_imgs_diva2.webp"
 import divaBg2 from "/public/divanice.com_imgs_diva3.webp"
 import { useEffect, useState } from "react";
-import Loading from "@/app/loading";
 
 const HomeCarousel = () => {
     const settings = {
@@ -25,9 +24,7 @@ const HomeCarousel = () => {
         setData(false)
       },[])
   return (
-    <>
-          {data ? <Loading/> : 
-            <Slider {...settings}>
+          <Slider {...settings}>
             <LazyLoadComponent>
             <div style={{position : 'relative', height : '100vh'}}>
             <Image src={divaBg1} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
@@ -55,9 +52,6 @@ const HomeCarousel = () => {
             </div>
             </LazyLoadComponent>
         </Slider>
-          }
-          </>
-
       )
 }
 
