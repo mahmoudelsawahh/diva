@@ -45,7 +45,7 @@ export default async function Home () {
    
   return (
         <>
-                    <HomeCarousel/>
+                    {/* <HomeCarousel/> */}
                <section>
                   <AboutUs/>
                 </section>

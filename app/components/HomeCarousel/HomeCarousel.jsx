@@ -5,7 +5,6 @@ import {Fade, Typography } from '@/app/lib/MuiSsr';
 import Image from "next/image";
 import divaBg1 from "/public/divanice.com_imgs_diva2.webp"
 import divaBg2 from "/public/divanice.com_imgs_diva3.webp"
-import { useEffect, useState } from "react";
 const HomeCarousel = () => {
     const settings = {
         dots: true,
@@ -18,14 +17,8 @@ const HomeCarousel = () => {
         lazyLoad: true
 
       };
-      const [loadingComponent , setLoadingComponent] = useState(true);
-      useEffect(()=>{
-        setLoadingComponent(false)
-      },[])
   return (
-      <>
-        {loadingComponent ? null :
-          <LazyLoadComponent>
+     <LazyLoadComponent>
           <Slider {...settings}>
             <LazyLoadComponent>
             <div style={{position : 'relative', height : '100vh'}}>
@@ -55,8 +48,6 @@ const HomeCarousel = () => {
             </LazyLoadComponent>
         </Slider>
      </LazyLoadComponent>
-        }
-      </>
       )
 }
 
