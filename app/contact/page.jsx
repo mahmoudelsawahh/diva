@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic'
 
 const ContactTitle = dynamic(() => import('../components/ContactPage/ContactTitle'), {
-  ssr: false,
+  ssr: true,
 })
 const FormWrapper = dynamic(() => import('../components/ContactPage/FormWrapper'), {
-  ssr: false,
+  ssr: true,
 })
 const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'), {
-  ssr: false,
+  ssr: true,
 })
 
 const Contact = () => {

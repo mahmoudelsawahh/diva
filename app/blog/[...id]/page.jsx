@@ -3,15 +3,15 @@ import { Container, Grid } from '../../lib/MuiSsr'
 import {getBlogData } from '@/app/lib/DataFetching'
 
 const SimilarBlog = dynamic(() => import('@/app/components/blog-Page/sub-blog/SimilarBlog'), {
-  ssr: false,
+  ssr: true,
 })
  
 const SubBlogContent = dynamic(() => import('@/app/components/blog-Page/sub-blog/SubBlogContent'), {
-  ssr: false,
+  ssr: true,
 })
  
 const SubBlogTitle = dynamic(() => import('@/app/components/blog-Page/sub-blog/SubBlogTitle'), {
-  ssr: false,
+  ssr: true,
 })
 
 

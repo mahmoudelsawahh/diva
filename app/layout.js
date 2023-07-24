@@ -6,16 +6,16 @@ import {Cairo } from 'next/font/google'
 import MuiTheme from './lib/muiThem'
 import { Suspense } from 'react'
 const NavBar = dynamic(() => import('./components/navbar/NavBar'), {
-  ssr: false,
+  ssr: true,
 })
 const Footer = dynamic(() => import('./components/footer/Footer'), {
-  ssr: false,
+  ssr: true,
 })
 const Loading = dynamic(() => import('./loading'), {
-  ssr: false,
+  ssr: true,
 })
 const SocialFooter = dynamic(() => import('./components/footer/SocialFooter'), {
-  ssr: false,
+  ssr: true,
 })
 
 const cairo = Cairo({

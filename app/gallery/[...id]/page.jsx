@@ -2,7 +2,7 @@ import { getCategoryDetail } from '@/app/lib/DataFetching'
 import dynamic from 'next/dynamic'
 
 const SubCategory = dynamic(() => import('@/app/components/Category/SubCategory/SubCategory'), {
-    ssr: false,
+    ssr: true,
   })
 
   export const metadata = {

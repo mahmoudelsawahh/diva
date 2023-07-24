@@ -2,13 +2,13 @@ import dynamic from 'next/dynamic'
 import { getArticleData } from '../lib/DataFetching';
  
 const BlogTitle = dynamic(() => import('../components/blog-Page/BlogTitle'), {
-  ssr: false,
+  ssr: true,
 })
 const SubBlog = dynamic(() => import('../components/blog-Page/SubBlog'), {
-  ssr: false,
+  ssr: true,
 })
 const InstagramBanner = dynamic(() => import('../components/InstagramBanner/InstagramBanner'), {
-  ssr: false,
+  ssr: true,
 })
 export default async function Blog (){
   const data = await getArticleData();

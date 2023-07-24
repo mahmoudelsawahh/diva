@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
  
 const Service = dynamic(() => import('../components/Service/Service'), {
-  ssr: false,
+  ssr: true,
 })
 
 const About = () => {

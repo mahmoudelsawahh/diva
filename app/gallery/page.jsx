@@ -1,6 +1,7 @@
-import Category from '../components/Category/Category'
 import { getCategoryData } from '../lib/DataFetching';
-
+const Category = dynamic(() => import('../components/Category/Category'), {
+  ssr: true,
+})
 
 
 export default async function Gallery () {
