@@ -48,9 +48,11 @@ export default async function Home () {
   return (
         <>
             <HomeCarousel/>
-                <section>
+               <Suspense fallback={<Loading/>}>
+               <section>
                   <AboutUs/>
                 </section>
+               </Suspense>
         </>
   )
 }
