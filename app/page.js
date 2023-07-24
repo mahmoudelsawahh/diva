@@ -19,9 +19,9 @@ const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
 // const InstagramBanner = dynamic(() => import('./components/InstagramBanner/InstagramBanner'), {
 //   ssr: true,
 // })
-// const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'), {
-//   ssr: true,
-// })
+const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'), {
+  ssr: true,
+})
 
 // const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'), {
 //   ssr: true,
@@ -47,9 +47,9 @@ export default async function Home () {
    
   return (
         <>
-               {/* <Suspense fallback={<Loading/>}>
+               <Suspense fallback={<Loading/>}>
                      <HomeCarousel/>
-                </Suspense> */}
+                </Suspense>
                <Suspense fallback={<Loading/>}>
                <section>
                   <AboutUs/>
