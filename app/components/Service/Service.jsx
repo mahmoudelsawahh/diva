@@ -43,7 +43,7 @@ const Service = () => {
     {loadingComponent ? null : 
     <LazyLoadComponent>
      <Box sx={{ overflow : 'hidden', position : 'relative'}}>
-       <Image src={mainBg} fill alt='diva' objectFit='cover' objectPosition='center' />
+       <Image src={mainBg} alt='diva' objectFit='cover' objectPosition='center' layout="responsive"/>
        <Image src={topWave} height={75} alt='diva' style={{zIndex : 100 , top : 0 , left : 0, position : 'absolute', transform : ' rotate(180deg)', width : '100%'}}/>
        <div className='overlay'></div>
         <Box sx={{position : 'relative'}}>
