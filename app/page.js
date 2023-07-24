@@ -1,4 +1,6 @@
 import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 // import { getArticleData, getCategoryData } from './lib/DataFetching';
 
@@ -34,7 +36,6 @@ const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarouse
 
 export const metadata ={
   title: "اتيليه فساتين زفاف وافراح",
-  description: '...',
 }
 
 
@@ -45,9 +46,9 @@ export default async function Home () {
 
    
   return (
-             <>
+             <Suspense fallback={<Loading/>}>
                 <HomeCarousel/>
-             </>
+             </Suspense>
   )
 }
 

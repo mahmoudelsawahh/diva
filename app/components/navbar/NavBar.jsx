@@ -51,14 +51,12 @@ export default function DrawerAppBar(props) {
   const drawer = (
    <LazyLoadComponent>
      <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-         <LazyLoadComponent>
                  {/* <Image  onClick={()=> router.push('/')} src={Logo} alt='اتيليه فساتين زفاف وافراح' width={'300'} priority/> */}
                  <div>
                    <div style={{position : 'relative', padding : '10px 60px'}}>
-                   <Image priority={true}  onClick={()=> router.push('/')} style={{width : '100%', height : '100%'}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
+                   <Image priority={true}  onClick={()=> router.push('/')} style={{width : '100%',}} objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                    </div>
                   </div>
-        </LazyLoadComponent>
       <Divider />
       <List>
       <ListItem  disablePadding sx={{display : 'flex', flexDirection : 'column'}} className='nav-link'>
@@ -92,11 +90,9 @@ export default function DrawerAppBar(props) {
           </IconButton>
           <Box sx={{ flexGrow: 1 , display: { xs: 'flex', sm: 'block' }, justifyContent : 'flex-start' , padding : {xs : '5px' , md :'12px'}, cursor : 'pointer'
            }}>
-            <LazyLoadComponent>
                   <div style={{width : '90px', position : 'relative', height : '76px'}}>
                   <Image priority={true}  onClick={()=> router.push('/')} fill objectFit='cover'  src={Logo} alt='اتيليه فساتين زفاف وافراح'/>
                   </div>
-            </LazyLoadComponent>
           </Box>
 
           <Box to="/page-link" sx={{ display: { xs: 'none', md: 'block' } }}  className='nav-link'>
