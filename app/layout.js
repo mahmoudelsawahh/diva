@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
               {children}
         </main>
         <footer>
-          <Footer/>
+          {/* <Footer/> */}
           <SocialFooter/>
         </footer>
         </MuiTheme>
