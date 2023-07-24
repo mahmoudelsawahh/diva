@@ -4,9 +4,9 @@ import Loading from './loading'
 
 // import { getArticleData, getCategoryData } from './lib/DataFetching';
 
-// const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
-//   ssr: true,
-// })
+const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
+  ssr: true,
+})
 // const Service = dynamic(() => import('./components/Service/Service'), {
 //   ssr: true,
 // })
@@ -46,7 +46,12 @@ export default async function Home () {
 
    
   return (
-                <HomeCarousel/>
+        <>
+            <HomeCarousel/>
+                <section>
+                  <AboutUs/>
+                </section>
+        </>
   )
 }
 
