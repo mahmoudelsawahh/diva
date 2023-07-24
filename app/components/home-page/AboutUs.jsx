@@ -6,26 +6,20 @@ import { Fade, Container, Grid } from '@/app/lib/MuiSsr';
 
 const AboutUs = () => {
   return (
-   <LazyLoadComponent>
      <Container maxWidth="xxl" fixed>
         <Grid container rowSpacing={0} sx={{flexDirection : {xs : 'column-reverse', md : 'row'}}}>
             <Grid item xs={12} md={6} >
-                <LazyLoadComponent>
                 <Fade left>
                     <WhyUs/>
                  </Fade>
-                </LazyLoadComponent>
             </Grid>
             <Grid item xs={12} md={6}>
-              <LazyLoadComponent>
               <Fade right>
                 <AboutIframe/>
               </Fade>
-              </LazyLoadComponent>
             </Grid> 
         </Grid>
     </Container>
-   </LazyLoadComponent>
   )
 }
 
