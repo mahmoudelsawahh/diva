@@ -1,7 +1,7 @@
 "use client"
 import Slider from "react-slick";
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
-import {Box, Fade, Typography } from '@/app/lib/MuiSsr';
+import {Fade, Typography } from '@/app/lib/MuiSsr';
 import Image from "next/image";
 import divaBg1 from "/public/divanice.com_imgs_diva2.webp"
 import divaBg2 from "/public/divanice.com_imgs_diva3.webp"
@@ -22,9 +22,7 @@ const HomeCarousel = () => {
           <Slider {...settings}>
             <LazyLoadComponent>
             <div style={{position : 'relative', height : '100vh'}}>
-            <Box sx={{width : '100%', height : '100%', position : 'absolute'}}>
-            <Image src={divaBg1} alt="اتيليه فساتين زفاف وافراح" layout="responsive" objectFit="cover" objectPosition="center"/>
-            </Box>
+            <Image src={divaBg1} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
              <div className="center">
                   <LazyLoadComponent>
                   <Fade left>
@@ -38,9 +36,7 @@ const HomeCarousel = () => {
             </LazyLoadComponent>
             <LazyLoadComponent>
             <div style={{position : 'relative', height : '100vh'}}>
-            <Box sx={{width : '100%', height : '100%', position : 'absolute'}}>
-              <Image src={divaBg2} alt="اتيليه فساتين زفاف وافراح" layout="responsive"  className="home-slider-secondImage"/>
-            </Box>
+            <Image src={divaBg2} alt="اتيليه فساتين زفاف وافراح" layout="fill" objectFit="cover" objectPosition="center"/>
             <div className="center">
                  <LazyLoadComponent>
                  <Fade left>
