@@ -1,6 +1,9 @@
 import dynamic from 'next/dynamic'
 import { getArticleData, getCategoryData } from './lib/DataFetching';
-
+import { Suspense } from 'react';
+const Loading = dynamic(() => import('./loading'), {
+  ssr: true,
+})
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
   ssr: true,
 })
@@ -41,7 +44,8 @@ export default async function Home () {
    
   return (
          <>
-              <HomeCarousel/>
+             <Suspense fallback={<Loading/>}>
+             <HomeCarousel/>
                <section  className='about-us'>
                 <AboutUs/>
             </section>
@@ -66,6 +70,7 @@ export default async function Home () {
             <section className='instagram-banner'>
               <InstagramBanner/>
             </section>
+             </Suspense>
          </>     
   )
 }
