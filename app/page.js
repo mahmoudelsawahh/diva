@@ -5,7 +5,7 @@ import Loading from './loading'
 // import { getArticleData, getCategoryData } from './lib/DataFetching';
 
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
-  ssr: false,
+  ssr: true,
 })
 // const Service = dynamic(() => import('./components/Service/Service'), {
 //   ssr: true,
@@ -20,7 +20,7 @@ const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
 //   ssr: true,
 // })
 const HomeCarousel = dynamic(() => import('./components/HomeCarousel/HomeCarousel'), {
-  ssr: false,
+  ssr: true,
 })
 
 // const DevaStudioVideo = dynamic(() => import('./components/DevaStudioVideo/DevaStudioVideo'), {
@@ -50,7 +50,7 @@ export default async function Home () {
                 <Suspense>
                      <HomeCarousel/>
                 </Suspense>
-               <Suspense fallback={<Loading/>}>
+               <Suspense>
                <section>
                   <AboutUs/>
                 </section>
