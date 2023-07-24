@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import { getCategoryData } from '../lib/DataFetching';
 const Category = dynamic(() => import('../components/Category/Category'), {
   ssr: true,

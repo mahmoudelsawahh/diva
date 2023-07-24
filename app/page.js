@@ -1,9 +1,8 @@
 import dynamic from 'next/dynamic'
 import { getArticleData, getCategoryData } from './lib/DataFetching';
 import { Suspense } from 'react';
-const Loading = dynamic(() => import('./loading'), {
-  ssr: true,
-})
+import Loading from './loading';
+
 const AboutUs = dynamic(() => import('./components/home-page/AboutUs'), {
   ssr: true,
 })
