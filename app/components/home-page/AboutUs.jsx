@@ -4,6 +4,7 @@ import AboutIframe from './AboutIframe'
 import { LazyLoadComponent } from 'react-lazy-load-image-component'
 import { Fade, Container, Grid } from '@/app/lib/MuiSsr';
 import Loading from '@/app/loading';
+import { useState , useEffect} from 'react';
 
 const AboutUs = () => {
   const [loadComponent , setLoadComponent] = useState(true);
@@ -13,6 +14,8 @@ const AboutUs = () => {
   return (
     <>
        {loadComponent ? 
+    <Loading/>
+    : 
     <LazyLoadComponent>
      <Container maxWidth="xxl" fixed>
         <Grid container rowSpacing={0} sx={{flexDirection : {xs : 'column-reverse', md : 'row'}}}>
@@ -33,7 +36,7 @@ const AboutUs = () => {
         </Grid>
     </Container>
    </LazyLoadComponent>
-    : <Loading/>}
+    }
     </>
   )
 }
